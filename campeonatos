@@ -1,0 +1,10 @@
+create database campeonatos;
+use campeonatos;
+
+CREATE TABLE Campeonatos
+(
+	id INT(11) not null auto_increment,
+	titulo VARCHAR(255),
+	descricao TEXT, 
+	primary key(id)
+);
