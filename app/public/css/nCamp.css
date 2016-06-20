@@ -21,7 +21,7 @@ article{
 	padding-top:50px;
 	padding-bottom:100px;
 	width:750px;
-	border: 1px solid #aac0ae;	
+	border: 1px solid #aac0ae;
 	font-size: 18px;
 	text-align: center;
 	line-height:200%;
@@ -31,6 +31,19 @@ input{
 	width:50px;
 	height:20px;
 }
-.names{
+.inputs{
 	width:150px;
+}
+.enviar{
+	margin-top: 10px;
+	color: #fff;
+	background-color:#2F4F4F;
+	font-size: 14px;
+	border: 0px;
+	height: 30px;
+	width: 100px;
+}
+.enviar:hover{
+	cursor: pointer;
+	background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.15));
 }

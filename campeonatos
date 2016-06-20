@@ -1,10 +1,42 @@
 create database campeonatos;
 use campeonatos;
 
+CREATE TABLE ADM (
+	id_adm INT(11) not null auto_increment,
+	login varchar(50),
+	senha varchar(30),
+	primary key(id_adm)
+);
+
 CREATE TABLE Campeonatos
 (
-	id INT(11) not null auto_increment,
-	titulo VARCHAR(255),
-	descricao TEXT, 
-	primary key(id)
+	id_camp INT(11) not null auto_increment,
+	nome VARCHAR(255),
+	nEquipes int(11),
+	id_adm int (11),
+	primary key(id_camp)
 );
+
+CREATE TABLE Times(
+	id_time INT(11) not null auto_increment,
+	nome VARCHAR(255),
+	ativo char(1),
+	pontuacao INT(10),
+	id_camp INT(11),
+	primary key(id_time)
+);
+
+CREATE TABLE Jogos(
+	id_jogos INT(11) not null auto_increment,
+	id_time1 INT(11),
+	id_time2 INT(11),
+	ativo char(1),
+	id_camp INT(11),
+	primary key (id_jogos)
+);
+
+alter table Campeonatos add foreign key (id_adm) references ADM(id_adm);
+alter table Times add foreign key (id_camp) references Campeonatos(id_camp);
+alter table Jogos add foreign key (id_time1) references Times(id_time);
+alter table Jogos add foreign key (id_time2) references Times(id_time);
+alter table Jogos add foreign key (id_camp) references Campeonatos(id_camp);

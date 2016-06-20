@@ -1,11 +1,21 @@
 var express = require('express');
 var load = require('express-load');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var validator = require('express-validator');
+//var passport = require('passport');
+var expressSession = require('express-session');
 
 module.exports = function(){
   var app= express();
   app.use(express.static('./app/public'));
   app.set('view engine','ejs');
   app.set('views', './app/views');
+  app.use(bodyParser.urlencoded({extended:true}));
+  app.use(cookieParser());
+  app.use(expressSession({secret: 'mySecretKey'}));
+  app.use(validator());
+  app.use(bodyParser.json());
   load('routes',{cwd: 'app'}) //carrega as pastas routes e infra da pasta app
       .then('infra')
       .into(app);// basicamente informa que tudo que for carregado vai para o objeto app
@@ -17,5 +27,5 @@ module.exports = function(){
         res.status(500).render('erros/500');
         next();
       });
-  return app;    
+  return app;
 }

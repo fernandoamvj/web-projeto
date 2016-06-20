@@ -4,19 +4,29 @@
 		<meta charset="UTF-8">
 		<title>Criando Campeonato!</title>
 		<link rel="stylesheet" href="css/nCamp.css">
+    <link rel="icon" href="/img/favicon.jpg">
 	</head>
 	<body>
 		<header>
 			<h1>E-Sports Championship </h1>
 		</header>
 		<article>
-			<h2> Cadastrar</h2>
-			<form action='/home/cadastraUser' method='post' id="nomeCnumP">
+			<div class='erros'>
+	      <%if(errosValidacao){%>
+	        <ul>
+	          <%for(var i=0;i<errosValidacao.length;i++){%>
+	            <li><%=errosValidacao[i].param%> - <%=errosValidacao[i].msg%></li>
+	          <%}%>
+	        </ul>
+	      <%}%>
+    </div>
+			<h2> Cadastro</h2>
+			<form action='/salvaUser' method='post' id="nomeCnumP">
 				Login :
-				<input type="text" name="name" class="names"> <br>
+				<input type="text" id='login' name="login" class="inputs"> <br>
 				Senha :
-				<input type="text" name="senha"> <br>
-				<input type="submit" value="Cadastrar">
+				<input type="password" id='senha' name="senha" class="inputs"> <br>
+				<input type="submit" value=" Cadastrar " class="enviar">
 
 			</form>
 		</article>
