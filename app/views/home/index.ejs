@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>Campeonatos E-Sports</title>
-	<link rel="stylesheet" href="/css/estiloMain.css">
-  <link rel="icon" href="/img/favicon.jpg">
-  </head>
-  <body>
+    <link rel="stylesheet" href="/css/estiloMain.css">
+    <link rel="icon" href="/img/favicon.jpg">
+</head>
+
+<body>
     <header>
-      <h1>E-Sports Championship </h1>
+        <h1>E-Sports Championship </h1>
     </header>
     <nav>
-      <ul class='menu'>
-    		<li><a href="localhost:3000/"> Home</a><li>
-        <li><a href="/cadastroUser"> Cadastrar</a><li>
-    		<li><a href="#acesso">Login</a></li>
-    		<li><a href="#imagens">Imagens de eventos E-Sports</a></li>
-    		<li><a href="#ultimos">Acompanhe os últimos campeonatos!</a></li>
-      </ul>
+        <ul class='menu'>
+            <li><a href="localhost:3000/"> Home</a>
+                <li>
+                    <li><a href="/cadastroUser"> Cadastrar</a>
+                        <li>
+                            <li><a href="#acesso">Login</a></li>
+                            <li><a href="#imagens">Imagens de eventos E-Sports</a></li>
+                            <li><a href="#ultimos">Acompanhe os últimos campeonatos!</a></li>
+        </ul>
     </nav>
     <div id="principal">
-    <article class="centro">
-        <h2>Gerencie seus campeonatos!</h2>
-        <p>De uma forma simples e rápida gerencie e/ou acompanhe os seus campeonatos.
-           Após o cadastro dos times participantes os confrontos são automaticamente sorteados em formato "mata-mata".
-		   Os sorteios são feitos de forma aleatória.
-           Qualquer usuário logado ou não conseguirá acompanhar a tabela do campeonato.</p>
-      <div id="acesso">
-        <h2>Faça aqui o seu login : </h2>
-        <form action='/home/homeUser' method='post'>
-    			  Login :
-    			<input type="text" name="login"> <br>
-    		    Senha :
-    			<input type="password" name="senha"> <br>
-    			<input type="submit">
-			</form>
-	  </div>
-      <div id="imagens">
-        <h2>Veja aqui algumas imagens de eventos de E-Sports:</h2>
-		<div id="galeria">
-			<img src="img\event1.jpg" id="slide">
-			<button id="anterior" class="controle">Anterior</button>
-			<button id="proximo" class="controle">Próximo</button>
-		</div>
-       </div>
-      <div id="ultimos">
-        <h2>Acompanhe aqui os últimos campeonatos:</h2>
-       </div>
-       <div id="logo">
-       </div>
-    </article>
-		</div>
-	<script src="/js/slide.js"></script>
-  </body>
+        <article class="centro">
+            <h2>Gerencie seus campeonatos!</h2>
+            <p>De uma forma simples e rápida gerencie e/ou acompanhe os seus campeonatos. Após o cadastro dos times participantes os confrontos são automaticamente sorteados em formato "mata-mata". Os sorteios são feitos de forma aleatória. Qualquer usuário
+                logado ou não conseguirá acompanhar a tabela do campeonato.</p>
+            <div id="acesso">
+                <h2>Faça aqui o seu login : </h2>
+                <form action='/home/homeUser' method='post'>
+                    Login :
+                    <input type="text" name="login">
+                    <br> Senha :
+                    <input type="password" name="senha">
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+            <div id="imagens">
+                <h2>Veja aqui algumas imagens de eventos de E-Sports:</h2>
+                <div id="galeria">
+                    <img src="img\event1.jpg" id="slide">
+                    <button id="anterior" class="controle">Anterior</button>
+                    <button id="proximo" class="controle">Próximo</button>
+                </div>
+            </div>
+            <div id="ultimos">
+                <h2>Acompanhe aqui os últimos campeonatos:</h2>
+            </div>
+            <div id="logo">
+            </div>
+        </article>
+    </div>
+    <script src="/js/slide.js"></script>
+</body>
 
 </html>

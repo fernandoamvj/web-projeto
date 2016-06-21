@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Criando Campeonato!</title>
-	<link rel="stylesheet" href="/css/forms.css">
+	<link rel="stylesheet" href="css/nCamp.css">
 	<link rel="icon" href="/img/favicon.jpg">
 </head>
 
@@ -14,13 +14,20 @@
 	</header>
 	<article>
 		<h2> Criando o seu campeonato!</h2>
-		<form  action='/home/homeUser/cadastraTimes' method='post'>
+		<form id="nomeCnumP">
 			Nome do Campeonato :
-			<input type="text" name="nome" required='required' class="inputs"/>
+			<input type="text" name="name" class="names">
 			<br> Número de participantes :
-			<input type="number" name="nEquipes" required='required' class="inputs">
+			<input type="number" name="nParticipantes">
 			<br>
-			<input type="submit" value=" Cadastrar " class="enviar">
+			<input type="submit">
+
+		</form>
+		<form id="nomes">
+			Digite o nome do time <span id="np"> 0 </span>
+			<input type="text" name="nameP" class="names">
+			<br>
+			<input type="submit">
 		</form>
 	</article>
 </body>

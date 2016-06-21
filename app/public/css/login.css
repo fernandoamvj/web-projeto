@@ -1,44 +1,41 @@
-article{
-	position: absolute;
-	top: 50%; 
-	vertical-align: middle;
-	
+article {
+    position: absolute;
+    top: 50%;
+    vertical-align: middle;
 }
-#negado{
-	opacity:0;
-	font-family:Verdana;
-	font-weight:bold;
-	font-size:16px;
-	color:red;
-	line-height:200%;
+#negado {
+    opacity: 0;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 16px;
+    color: red;
+    line-height: 200%;
 }
-#sucesso{
-	opacity:0;
-	font-family:Verdana;
-	font-size:16px;
-	color:blue;
+#sucesso {
+    opacity: 0;
+    font-family: Verdana;
+    font-size: 16px;
+    color: blue;
 }
-span{
-	font-size:14px;
-	color:black;
-	font-weight:normal;
+span {
+    font-size: 14px;
+    color: black;
+    font-weight: normal;
 }
-a{
-	text-decoration:none;
-	font-weight:bolder;
-	color: blue;
+a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: blue;
 }
-#redireciona{
-	opacity:0;
-	
+#redireciona {
+    opacity: 0;
 }
-
-#negado.visualiza{
-	opacity:1;
+#negado.visualiza {
+    opacity: 1;
 }
-#sucesso.visualiza{
-	opacity:1;
+#sucesso.visualiza {
+    opacity: 1;
 }
-#redireciona.visualiza{
-	opacity:1;
+#redireciona.visualiza {
+    opacity: 1;
 }
