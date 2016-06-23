@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Criando Campeonato!</title>
-	<link rel="stylesheet" href="css/nCamp.css">
+	<link rel="stylesheet" href="/css/nCamp.css">
 	<link rel="icon" href="/img/favicon.jpg">
 </head>
 
@@ -13,21 +13,14 @@
 		<h1>E-Sports Championship </h1>
 	</header>
 	<article>
-		<h2> Criando o seu campeonato!</h2>
-		<form id="nomeCnumP">
-			Nome do Campeonato :
-			<input type="text" name="name" class="names">
-			<br> Número de participantes :
-			<input type="number" name="nParticipantes">
-			<br>
-			<input type="submit">
-
-		</form>
-		<form id="nomes">
-			Digite o nome do time <span id="np"> 0 </span>
-			<input type="text" name="nameP" class="names">
-			<br>
-			<input type="submit">
+		<h2>Insira as equipes!</h2>
+		<form  action='/home/homeUser/cadastraTimes' method='post'>
+			<%for(var i=0; i < equipes[0].nEquipes;i++)  {%>
+				Nome do time <%=i + 1%>  :
+				<input type="text" name="nome" required='required' class="inputs"/>
+				<br>
+			<%}%>
+			<input type="submit" value=" Cadastrar " class="enviar">
 		</form>
 	</article>
 </body>

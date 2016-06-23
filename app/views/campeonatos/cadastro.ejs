@@ -14,11 +14,11 @@
 	</header>
 	<article>
 		<h2> Criando o seu campeonato!</h2>
-		<form  action='/home/homeUser/cadastraTimes' method='post'>
+		<form  action='/home/homeUser/cadastraCamp' method='post'>
 			Nome do Campeonato :
 			<input type="text" name="nome" required='required' class="inputs"/>
 			<br> Número de participantes :
-			<input type="number" name="nEquipes" required='required' class="inputs">
+			<input type="number" min='2' name="nEquipes" required='required' class="inputs">
 			<br>
 			<input type="submit" value=" Cadastrar " class="enviar">
 		</form>
